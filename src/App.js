@@ -9,7 +9,9 @@ const App = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch("/books.json");
+      const response = await fetch(
+        "https://raw.githubusercontent.com/mehmetkeskinn/bookstorebl/main/public/books.json"
+      );
       const data = await response.json();
       setBooks(data);
     } catch (error) {
