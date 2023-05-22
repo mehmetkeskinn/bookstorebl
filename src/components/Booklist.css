@@ -1,0 +1,22 @@
+.book-list-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 100rem;
+  padding: 0 4rem;
+}
+
+.section-header {
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+
+.book-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}

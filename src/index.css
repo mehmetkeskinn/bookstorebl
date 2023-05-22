@@ -1,0 +1,126 @@
+:root {
+  height: 100%;
+  /* 1 rem = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  --color-primary: #ececec;
+  --color-primary-light-1: #efefef;
+  --color-primary-light-2: #f1f1f1;
+  --color-primary-dark-1: #d5d5d5;
+
+  --color-secondary: #e63946;
+  --color-secondary-light-1: #e84b58;
+  --color-secondary-light-2: #eb5e6a;
+  --color-secondary-dark-1: #cf3441;
+
+  --color-background: #1d1d1d;
+  --color-background-light-1: #494949;
+  --color-background-light-2: #606060;
+  --color-background-dark-1: #191919;
+
+  --color-on-primary: #1d1d1d;
+  --color-on-secondary: #edf2f4;
+  --color-on-background: #edf2f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  font-size: 1.6rem;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 300ms;
+}
+
+h1 {
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+/* Remove mobile highligh color */
+input,
+textarea,
+button,
+select,
+a,
+i,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* IOS input bug fix */
+input {
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* IOS disabled color fix */
+input:disabled,
+textarea:disabled,
+input:disabled::placeholder,
+textarea:disabled::placeholder {
+  -webkit-text-fill-color: currentcolor; /* 1. sets text fill to current `color` for safari */
+  opacity: 1; /* 2. correct opacity on iOS */
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-background-dark-1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-background-light-2);
+}
+
+/* Handle on hover */
+@media (hover: hover) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-background-light-1);
+  }
+}
